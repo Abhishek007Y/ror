@@ -1,0 +1,294 @@
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20230706115722)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" varchar, "author" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230706115722"]]
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-06 12:01:38.057596"], ["updated_at", "2023-07-06 12:01:38.057596"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/add" for 127.0.0.1 at 2023-07-06 17:44:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/add"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-07-06 17:44:40 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2023-07-06 17:44:43 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 497)
+Completed 200 OK in 13ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 4705)
+
+
+Started GET "/g" for 127.0.0.1 at 2023-07-06 17:44:47 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/g"):
+  
+Started GET "/create" for 127.0.0.1 at 2023-07-06 17:45:03 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+Started GET "/api_v1_articles_create_path" for 127.0.0.1 at 2023-07-06 17:45:24 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api_v1_articles_create_path"):
+  
+Started GET "/api_v1_articles_create_path/" for 127.0.0.1 at 2023-07-06 17:45:30 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api_v1_articles_create_path"):
+  
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 17:45:59 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/articles"):
+  
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 17:49:22 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/articles"):
+  
+Started POST "/api/v1/articles/create" for 127.0.0.1 at 2023-07-06 17:53:51 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/articles/create"):
+  
+Started POST "/api/v1/articles/create/" for 127.0.0.1 at 2023-07-06 17:53:55 +0530
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/articles/create"):
+  
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 17:59:01 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/abhishek/ror/backend/app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:01:16 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/abhishek/ror/backend/app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:03:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/home/abhishek/ror/backend/app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/api/v1/articles_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:05:09 +0530
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"new article", "body"=>"body", "author"=>"article author", "article"=>{"title"=>"new article", "body"=>"body", "author"=>"article author"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:14:in `create'
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "new article"], ["body", "body"], ["author", "article author"], ["created_at", "2023-07-06 12:35:09.729904"], ["updated_at", "2023-07-06 12:35:09.729904"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:14:in `create'
+Completed 200 OK in 59ms (Views: 0.6ms | ActiveRecord: 4.8ms | Allocations: 38927)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:05:24 +0530
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 72)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:05:27 +0530
+Processing by Api::V1::ArticlesController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 30)
+
+
+Started GET "/api/v1/articles/create" for 127.0.0.1 at 2023-07-06 18:05:31 +0530
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"create"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 28)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:08:49 +0530
+Processing by Api::V1::ArticlesController#index as */*
+  Parameters: {"title"=>"new article", "body"=>"body", "author"=>"article author", "article"=>{"title"=>"new article", "body"=>"body", "author"=>"article author"}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 1.3ms | Allocations: 2653)
+
+
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:11:23 +0530
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"article 2", "body"=>"body 2", "author"=>"article author 2", "article"=>{"title"=>"article 2", "body"=>"body 2", "author"=>"article author 2"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:16:in `create'
+  [1m[36mArticle Create (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "article 2"], ["body", "body 2"], ["author", "article author 2"], ["created_at", "2023-07-06 12:41:23.471529"], ["updated_at", "2023-07-06 12:41:23.471529"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:16:in `create'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 3.3ms | Allocations: 2051)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:11:29 +0530
+Processing by Api::V1::ArticlesController#index as */*
+  Parameters: {"title"=>"article 2", "body"=>"body 2", "author"=>"article author 2", "article"=>{"title"=>"article 2", "body"=>"body 2", "author"=>"article author 2"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 860)
+
+
+Started GET "/api/v1/articles/2" for 127.0.0.1 at 2023-07-06 18:14:50 +0530
+Processing by Api::V1::ArticlesController#show as */*
+  Parameters: {"title"=>"article 2", "body"=>"body 2", "author"=>"article author 2", "id"=>"2", "article"=>{"title"=>"article 2", "body"=>"body 2", "author"=>"article author 2"}}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 3438)
+
+
+Started PUT "/api/v1/articles/2" for 127.0.0.1 at 2023-07-06 18:19:58 +0530
+Processing by Api::V1::ArticlesController#update as */*
+  Parameters: {"title"=>"half girlfiend", "body"=>"love story", "author"=>"chetan bhagat", "id"=>"2", "article"=>{"title"=>"half girlfiend", "body"=>"love story", "author"=>"chetan bhagat"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:34:in `update'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.2ms | Allocations: 2693)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'titile' for Article.):
+  
+app/controllers/api/v1/articles_controller.rb:36:in `update'
+Started PUT "/api/v1/articles/2" for 127.0.0.1 at 2023-07-06 18:20:55 +0530
+Processing by Api::V1::ArticlesController#update as */*
+  Parameters: {"title"=>"article 2", "body"=>"updated body", "author"=>"author is same", "id"=>"2", "article"=>{"title"=>"article 2", "body"=>"updated body", "author"=>"author is same"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:34:in `update'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 624)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'titile' for Article.):
+  
+app/controllers/api/v1/articles_controller.rb:36:in `update'
+Started PUT "/api/v1/articles/2" for 127.0.0.1 at 2023-07-06 18:23:12 +0530
+Processing by Api::V1::ArticlesController#update as */*
+  Parameters: {"title"=>"article 2", "body"=>"updated body", "author"=>"author is same", "id"=>"2", "article"=>{"title"=>"article 2", "body"=>"updated body", "author"=>"author is same"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:34:in `update'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.2ms | Allocations: 2601)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'titile' for Article.):
+  
+app/controllers/api/v1/articles_controller.rb:36:in `update'
+Started PUT "/api/v1/articles/2" for 127.0.0.1 at 2023-07-06 18:24:15 +0530
+Processing by Api::V1::ArticlesController#update as */*
+  Parameters: {"title"=>"article 2", "body"=>"updated body", "author"=>"author is same", "id"=>"2", "article"=>{"title"=>"article 2", "body"=>"updated body", "author"=>"author is same"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:36:in `update'
+  [1m[36mArticle Update (0.4ms)[0m  [1m[33mUPDATE "articles" SET "body" = ?, "author" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["body", "updated body"], ["author", "author is same"], ["updated_at", "2023-07-06 12:54:16.049147"], ["id", 2]]
+  ↳ app/controllers/api/v1/articles_controller.rb:36:in `update'
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:36:in `update'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 4396)
+
+
+Started PUT "/api/v1/articles/1" for 127.0.0.1 at 2023-07-06 18:25:31 +0530
+Processing by Api::V1::ArticlesController#update as */*
+  Parameters: {"title"=>"article changed", "body"=>"updated body is changed", "author"=>"author is also changed", "id"=>"1", "article"=>{"title"=>"article changed", "body"=>"updated body is changed", "author"=>"author is also changed"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:36:in `update'
+  [1m[36mArticle Update (1.9ms)[0m  [1m[33mUPDATE "articles" SET "title" = ?, "body" = ?, "author" = ?, "updated_at" = ? WHERE "articles"."id" = ?[0m  [["title", "article changed"], ["body", "updated body is changed"], ["author", "author is also changed"], ["updated_at", "2023-07-06 12:55:31.390980"], ["id", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:36:in `update'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:36:in `update'
+Completed 200 OK in 17ms (Views: 0.4ms | ActiveRecord: 7.8ms | Allocations: 4389)
+
+
+Started DELETE "/api/v1/articles/1" for 127.0.0.1 at 2023-07-06 18:28:20 +0530
+Processing by Api::V1::ArticlesController#destroy as */*
+  Parameters: {"title"=>"article changed", "body"=>"updated body is changed", "author"=>"author is also changed", "id"=>"1", "article"=>{"title"=>"article changed", "body"=>"updated body is changed", "author"=>"author is also changed"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:47:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:49:in `destroy'
+  [1m[36mArticle Destroy (1.9ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:49:in `destroy'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:49:in `destroy'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 3858)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:28:43 +0530
+Processing by Api::V1::ArticlesController#index as */*
+  Parameters: {"title"=>"article changed", "body"=>"updated body is changed", "author"=>"author is also changed", "article"=>{"title"=>"article changed", "body"=>"updated body is changed", "author"=>"author is also changed"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 859)
+
+
+Started GET "/api/v1/articles/create" for 127.0.0.1 at 2023-07-06 18:39:46 +0530
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1937)
+
+
+Started GET "/api/v1/articles/show" for 127.0.0.1 at 2023-07-06 18:40:01 +0530
+Processing by Api::V1::ArticlesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/articles_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 519)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:40:05 +0530
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.4ms | Allocations: 2195)
+
+
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:44:20 +0530
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"programing languages", "body"=>"programing languages", "author"=>"abhishek", "article"=>{"title"=>"programing languages", "body"=>"programing languages", "author"=>"abhishek"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:25:in `create'
+  [1m[36mArticle Create (0.8ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "programing languages"], ["body", "programing languages"], ["author", "abhishek"], ["created_at", "2023-07-06 13:14:20.828542"], ["updated_at", "2023-07-06 13:14:20.828542"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:25:in `create'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 7.4ms | Allocations: 2016)
+
+
+Started POST "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:44:47 +0530
+Processing by Api::V1::ArticlesController#create as */*
+  Parameters: {"title"=>"happy", "body"=>"fintech company", "author"=>"#######", "article"=>{"title"=>"happy", "body"=>"fintech company", "author"=>"#######"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:25:in `create'
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "happy"], ["body", "fintech company"], ["author", "#######"], ["created_at", "2023-07-06 13:14:47.884662"], ["updated_at", "2023-07-06 13:14:47.884662"]]
+  ↳ app/controllers/api/v1/articles_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:25:in `create'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 6.0ms | Allocations: 1897)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:44:52 +0530
+Processing by Api::V1::ArticlesController#index as */*
+  Parameters: {"title"=>"happy", "body"=>"fintech company", "author"=>"#######", "article"=>{"title"=>"happy", "body"=>"fintech company", "author"=>"#######"}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 982)
+
+
+Started GET "/api/v1/articles/" for 127.0.0.1 at 2023-07-06 18:45:38 +0530
+Processing by Api::V1::ArticlesController#index as HTML
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/api/v1/articles_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 978)
+
+
